@@ -4,3 +4,6 @@ version = "0.1.0"
 requires-python = ">=3.10"
 dependencies = ["sentence-transformers"]
 description = "Ask questions about your docs — local, zero-config"
+
+[project.optional-dependencies]
+dev = ["pytest"]
