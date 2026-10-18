@@ -1,4 +1,7 @@
 def chunk_words(text: str, size: int, overlap: int) -> list[str]:
+    if overlap >= size:
+        raise ValueError("overlap should be smaller than size")
+    
     words = text.split()
     step = size - overlap
     chunks = []
@@ -9,6 +12,6 @@ def chunk_words(text: str, size: int, overlap: int) -> list[str]:
 
         if start + size >= len(words):
             break
-        
-    return chunks
     
+    return chunks
+ 
