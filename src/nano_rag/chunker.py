@@ -1,6 +1,9 @@
 def chunk_words(text: str, size: int, overlap: int) -> list[str]:
     if overlap >= size:
         raise ValueError("overlap should be smaller than size")
+
+    if overlap < 0:
+                raise ValueError("overlap should not be negative")
     
     words = text.split()
     step = size - overlap
